@@ -1,0 +1,64 @@
+<html>
+<body background="bg6.jpg">
+<table align="center">
+    <tr>
+        <td align="top"><img src="logo.jpg" style="width:150px;height:70px;"></td>
+        <td align="middle"><font face="arial" size="20" color="blue"><b>PRAKASH SUPER MARKET</font></b></td>
+    </tr>
+</table>
+<hr size="10" color="green">
+<table>
+<tr>
+<td>
+<a href="mainpage1.html"><b><u><font color="yellow" size=5><p align="left">Click here for main page>>></p></font></b></u></a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="mainpage2.html"><b><u><font color="yellow" size=5><p align="right">Click here to view offers>>></p></font></b></u></a>
+</td>
+</tr>
+</table>
+<marquee>
+<font face="arial" color="red" size=6><b>
+<pre>
+---SPECIAL OFFERS GOING ON!!! HURRY UP!!! GET MORE AND PAY LESS!!!---
+</font> </b>
+</pre>
+</marquee>
+<center> 
+<form>
+<table width="20%" bgcolor="0099CC" align="left" style="margin-top:100px; margin-left:525px;">
+<tr>
+<td colspan=2><center><font size=4><b>ADMIN LOGIN</b></font></center></td>
+</tr>
+<tr>
+<td>Username</td>
+<td><input type="text" size=25 name="userid"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="Password" size=25 name="pwd"></td>
+</tr>
+<tr>
+<td ><input type="Reset"></td>
+<td><input type="submit" onclick="check(this.form)" value="Login"></td>
+</tr>
+</table>
+</form>
+</center>
+<script language="javascript">
+function check(form)
+{
+if(form.userid.value == "admin1" && form.pwd.value == "admin")
+{
+window.open('bill.html')
+}
+else
+{
+alert("Incorrect Password or Username")
+}
+}
+</script>
+</body>
+</html>

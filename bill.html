@@ -1,0 +1,160 @@
+<html>
+<body background="bg5.jpg">
+<table align="center">
+<tr>
+<td align="top"><img src="logo.jpg" style="width:150px;height:70px;">
+<td align="middle"><font face="arial" size="20" color="blue"><b>PRAKASH SUPER MARKET</font></b></td>
+</tr>
+</table>
+<hr size="10" color="green">
+<font face="Comic Sans MS" size="4" align="left">
+<a href="mainpage2.html"><font color="yellow">Click here to know about products and latest offers>>></font></a>
+</font>
+<form id="billForm">
+<font face="Comic Sans MS" color="lightgreen" size=2.5>
+<center>
+<font size="5" color="red">WELCOME ADMIN!!!</font>
+<h1>Total bill amount</h1>
+</center>
+<table align="center" cellpadding=10 cellspacing=8 style="color:white;">
+<font face="Comic Sans MS" size="4">
+<tr><td><div>
+<label for="cname">Customer Name</label>
+</td><td>
+<input type="text" name="cname" id="cname" value="" />
+</div></td></tr>
+<tr><td><div>
+<label for="pname">Product 1</label>
+</td>
+<td>
+<input type="text" name="pname1" id="pname1" value="" />
+</div></td>
+<td><div>
+<label for="quantity">Quantity</label>
+</td>
+<td>
+<input type="text" name="quantity1" id="quantity1" value="" />
+</div></td>
+<td><div>
+<label for="rate">Rate</label>
+</td>
+<td>
+<input type="text" name="rate1" id="rate1" value="" />
+</div></td></tr>
+<tr><td><div>
+<label for="pname">Product 2</label>
+</td>
+<td>
+<input type="text" name="pname2" id="pname2" value="" />
+</div></td>
+<td><div>
+<label for="quantity">Quantity</label>
+</td>
+<td>
+<input type="text" name="quantity2" id="quantity2" value="" />
+</div></td>
+<td><div>
+<label for="rate">Rate</label>
+</td>
+<td>
+<input type="text" name="rate2" id="rate2" value="" />
+</div></td></tr>
+<tr><td><div>
+<label for="pname">Product 3</label>
+</td>
+<td>
+<input type="text" name="pname3" id="pname3" value="" />
+</div></td>
+<td><div>
+<label for="quantity">Quantity</label>
+</td>
+<td>
+<input type="text" name="quantity3" id="quantity3" value="" />
+</div></td>
+<td><div>
+<label for="rate">Rate</label>
+</td>
+<td>
+<input type="text" name="rate3" id="rate3" value="" />
+</div></td></tr>
+<tr><td><div>
+<label for="pname">Product 4</label>
+</td>
+<td>
+<input type="text" name="pname4" id="pname4" value="" />
+</div></td>
+<td><div>
+<label for="quantity">Quantity</label>
+</td>
+<td>
+<input type="text" name="quantity4" id="quantity4" value="" />
+</div></td>
+<td><div>
+<label for="rate">Rate</label>
+</td>
+<td>
+<input type="text" name="rate4" id="rate4" value="" />
+</div></td></tr>
+<tr>
+<td colspan=8>
+<font face="Comic Sans MS" size="5">
+<center><div>
+<label for="total">Total</label>
+<input type="text" name="total" id="total" value="" />
+</div>
+</center>
+</font>
+</td>
+</tr>
+<tr>
+<center>
+<td colspan=4>
+<input type = reset value = "CLEAR">
+</td>
+<td colspan=4>
+<div>
+<input type="button" value="CALCULATE" id="submit"/>
+</div>
+</td>
+</center>
+</tr>
+</font>
+</table>
+</form>
+<font face="Comic Sans MS" size="4">
+<center>
+<a href="adminlogin.html"><font color="yellow"><u>Click here to logout>>>></u></font></a>
+</center>
+</font>
+<script>
+    function billForm() {
+        'use strict';
+        var total;
+	var name = document.getElementById('cname').value;
+        var rate1 = document.getElementById('rate1').value;
+        var quantity1 = document.getElementById('quantity1').value;
+	var rate2 = document.getElementById('rate2').value;
+        var quantity2 = document.getElementById('quantity2').value;
+        var rate3 = document.getElementById('rate3').value;
+        var quantity3 = document.getElementById('quantity3').value;
+        var rate4 = document.getElementById('rate4').value;
+        var quantity4 = document.getElementById('quantity4').value;
+        var total1 = quantity1 * rate1;
+	var total2 = quantity2 * rate2;
+	var total3 = quantity3 * rate3;
+	var total4 = quantity4 * rate4;
+	var total = total1 + total2 + total3 + total4;
+        document.getElementById('total').value = total;
+        return false;
+    }
+
+    function init() {
+        'use strict';
+        var submit = document.getElementById('submit');
+        submit.onclick = billForm;
+    }
+
+    window.onload = init;
+</script>
+</body>
+</html
